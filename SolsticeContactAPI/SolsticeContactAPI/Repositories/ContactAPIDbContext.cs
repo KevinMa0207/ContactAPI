@@ -15,6 +15,7 @@ namespace SolsticeContactAPI.Repositories
 
         }
 
-        public DbSet<Contact> contactItems { get; set; }
+        public DbSet<Contact> ContactItems { get; set; }
+        public DbSet<Address> AddressItems { get; set; }
     }
 }
