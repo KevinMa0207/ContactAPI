@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolsticeContactAPI", "SolsticeContactAPI\SolsticeContactAPI.csproj", "{6FDA0C4B-77AB-4818-B1BF-EF7497074904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SolsticeContactAPItest", "SolsticeContactAPItest\SolsticeContactAPItest.csproj", "{589830EC-B9F0-42ED-A166-B20646589B26}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FDA0C4B-77AB-4818-B1BF-EF7497074904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FDA0C4B-77AB-4818-B1BF-EF7497074904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FDA0C4B-77AB-4818-B1BF-EF7497074904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FDA0C4B-77AB-4818-B1BF-EF7497074904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{589830EC-B9F0-42ED-A166-B20646589B26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{589830EC-B9F0-42ED-A166-B20646589B26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{589830EC-B9F0-42ED-A166-B20646589B26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{589830EC-B9F0-42ED-A166-B20646589B26}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {48EF1077-E515-445B-8885-5755E4040F87}
+	EndGlobalSection
+EndGlobal
