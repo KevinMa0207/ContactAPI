@@ -79,6 +79,7 @@ namespace SolsticeContactAPI.Controllers
 
         [HttpPut]
         [AllowAnonymous]
+        [Route("UpdateContact")]
         public async Task<JsonResult> UpdateContact([FromBody] ContactViewModel model)
         {
             try
@@ -104,7 +105,7 @@ namespace SolsticeContactAPI.Controllers
             catch (Exception e)
             {
                 //log exception here
-                return new JsonResult("Contact info update failed, contact id: " + model.Id.ToString());
+                return new JsonResult("Contact info update failed, contact ID: " + model.Id.ToString());
             }
             
             
@@ -113,9 +114,19 @@ namespace SolsticeContactAPI.Controllers
         [HttpDelete]
         [AllowAnonymous]
         [Route("DeleteContact")]
-        public async Task DeleteContact(int id)
+        public async Task<JsonResult> DeleteContact(int id)
         {
-            await _contactRepository.DeleteContact(id);
+            try
+            {
+                await _contactRepository.DeleteContact(id);
+                return new JsonResult("Contact info deleted, contact ID: " + id.ToString());
+            }
+            catch (Exception e)
+            {
+                //log exception here
+                return new JsonResult("Contact info delete failed, contact ID: " + id.ToString());
+            }
+            
         }
 
         [NonAction]
