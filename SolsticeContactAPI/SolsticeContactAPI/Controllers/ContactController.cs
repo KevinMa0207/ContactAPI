@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace SolsticeContactAPI.Controllers
 {
     [Route("api/[controller]")]
-    public class ValuesController : Controller
+    public class ContactController : Controller
     {
         // GET api/values
         [HttpGet]
