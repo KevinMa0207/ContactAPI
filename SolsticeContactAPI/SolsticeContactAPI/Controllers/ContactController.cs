@@ -142,12 +142,12 @@ namespace SolsticeContactAPI.Controllers
                 Birthdate = model.Birthdate,
                 WorkPhoneNumber = model.WorkPhoneNumber,
                 PersonalPhoneNumber = model.PersonalPhoneNumber,
-                AddressId = model.Address.AddressId,
-                StreetAddress = model.Address.StreetAddress,
-                City = model.Address.City,
-                State = model.Address.State,
-                Country = model.Address.Country,
-                ZipCode = model.Address.ZipCode
+                AddressId = model.Address != null ? model.Address.AddressId : 0,
+                StreetAddress = model.Address != null ? model.Address.StreetAddress : null,
+                City = model.Address != null ? model.Address.City : null,
+                State = model.Address != null ? model.Address.State : null,
+                Country = model.Address != null ? model.Address.Country : null,
+                ZipCode = model.Address != null ? model.Address.ZipCode : null
             };
         }
     }

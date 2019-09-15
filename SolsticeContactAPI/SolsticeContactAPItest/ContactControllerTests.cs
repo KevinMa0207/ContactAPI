@@ -1,9 +1,14 @@
+using GenFu;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using SolsticeContactAPI.Controllers;
+using SolsticeContactAPI.Entities;
+using SolsticeContactAPI.Models;
 using SolsticeContactAPI.Repositories;
 using System;
+using System.Linq;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace SolsticeContactAPItest
@@ -25,10 +30,20 @@ namespace SolsticeContactAPItest
                 }
             };
         }
-        [Fact]
-        public void Test1()
-        {
 
+        [Fact]
+        public async Task Get_All_Contacts()
+        {
+            //Arrange
+            A.Configure<Contact>().Fill<Address>(c => c.Address);
+            var contacts = A.ListOf<Contact>(10).ToList();
+            _contactRepository.Setup(x => x.GetAll(It.IsAny<ContactQueryModel>())).ReturnsAsync(contacts);
+
+            //Act
+            var result = await _contactController.GetAllContactAsync(new ContactQueryModel());
+
+            //Assert
+            Assert.NotNull(result);
         }
     }
 }
