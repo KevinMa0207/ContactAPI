@@ -1,6 +1,6 @@
 
 
-## T his Api contains one Controller which includ four endpoints:
+## This Api contains one Controller which includ four endpoints:
 
 * CreateContactAsync : to create a contact record
 * GetAllContactAsync : to get all contact records with a query model
